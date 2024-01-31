@@ -1,0 +1,112 @@
+body {
+  font-family: "Kanit", sans-serif;
+  height: 100%;
+  font-size: 16px;
+  background-color: black;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+  margin: 70px;
+}
+
+.spotify-card {
+  background-image: url(https://m.media-amazon.com/images/I/91RgtVNQskL._AC_UF1000,1000_QL80_.jpg);
+  width: 245px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px lightgreen;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+
+.spotify-card:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.info {
+  color: #ffffffff;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 200px;
+}
+
+.spotify-card:hover .info {
+  top: 600px;
+}
+
+.artist {
+  font-weight: 700;
+}
+
+.album {
+  font-size: 0.7em;
+  user-select: none;
+}
+
+.song {
+  font-size: 3em;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+  border-radius: 15px;
+}
+
+.controls {
+  position: absolute;
+  left: -40px;
+  bottom: 11px;
+}
+
+.spotify-card:hover .controls {
+  left: 10px;
+}
+
+.play-button {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: lime;
+  border-radius: 50%;
+  color: darkgreen;
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* .play-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 14px solid transparent;
+
+  border-left: 20px solid green;
+
+  transform: translate(-50%, -50%); 
+} */
