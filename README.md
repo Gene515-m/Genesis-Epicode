@@ -1,1 +1,1 @@
-Le risposte delle domande(variabile,algoritmo,undefined e null sono nella cartella javascript
+Il file js del compito è nella cartella javascript chiamato compito12-2.js
