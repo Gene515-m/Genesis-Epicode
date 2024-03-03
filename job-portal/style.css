@@ -87,14 +87,6 @@
   text-shadow: -3px 9px 9px rgba(0, 0, 0, 0.5);
 }
 
-.main input {
-  height: 71px;
-  width: 70%;
-  border: none;
-  outline: none;
-  padding: 15px;
-}
-
 .red {
   color: red;
 }
