@@ -1,0 +1,133 @@
+/*RESET*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*//==RESET==\\*/
+
+/*Nav Bar*/
+.navbar-brand {
+  font-size: 2rem;
+  color: red;
+}
+
+.nav-link {
+  color: rgb(7, 7, 78);
+}
+
+.nav-link:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.nav-item {
+  color: rgb(7, 7, 78);
+  font-weight: 500;
+  padding-left: 35px;
+}
+
+/*Button Register*/
+.btn0 {
+  height: 52px;
+  width: 140px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: rgb(248, 83, 83);
+}
+
+.btn0:hover {
+  background-color: rgb(214, 11, 11);
+  transition: all 0.4s;
+}
+/*END Button Register*/
+/*Button Log in*/
+.btn1 {
+  height: 52px;
+  width: 130px;
+  background-color: transparent;
+  color: rgb(248, 20, 20);
+  outline: none;
+  border: 2px solid rgb(248, 20, 20);
+  transition: all 0.4s;
+}
+
+.btn1:hover {
+  background-color: rgb(214, 11, 11);
+  transition: all 0.4s;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+/*END Button Log in*/
+
+/*//==Nav Bar==\\*/
+
+/*======================Main section============================*/
+
+/*SECTION*/
+/*Sfondo immagine */
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(image/main-image.webp);
+  background-size: cover;
+  min-height: 95vh;
+  width: 100%;
+}
+/*//Sfondo immagine\\ */
+.main h1 {
+  margin-top: 9rem;
+  font-size: 5rem;
+  font-weight: 800;
+  /* color: rgb(7, 7, 78); */
+  color: #fff;
+  text-shadow: -3px 9px 9px rgba(0, 0, 0, 0.5);
+}
+
+.main input {
+  height: 71px;
+  width: 70%;
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+
+.red {
+  color: red;
+}
+
+.sctn h1 {
+  font-size: 3.5rem;
+  color: rgb(7, 7, 78);
+}
+/*Card row job hover*/
+.sctn .card:hover {
+  color: red;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: -1px 3px 23px -11px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 3px 23px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 23px -11px rgba(0, 0, 0, 0.75);
+}
+/*END Card row job hover*/
+/*//==SECTION==\\*/
+
+/*[Barra di ricerca] Css div results */
+#results ul li {
+  list-style: none;
+  padding-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+#results p {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+section h3 {
+  color: rgb(7, 7, 78);
+}
+/*//Barra di ricerca\\*/
