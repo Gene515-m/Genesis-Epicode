@@ -1,0 +1,269 @@
+/* 
+    Style question.css
+    Gruppo n. 2
+
+*/
+/*=== Header ===*/
+
+* {
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  /* font-family: "Inter", sans-serif; */
+}
+
+/*=== Contenitore ===*/
+.cnt {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-top: 4rem;
+  /* font-family: "Inter", sans-serif; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+/*=== Div Domande ===*/
+.cnt-question {
+  color: #fff;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 2rem;
+ }
+
+/*=== Bottoni ===*/
+
+/*=== Div pulsanti ===*/
+.cnt-answers {
+  width: 800px;
+}
+/*=== Stile bottoni ===*/
+.cnt-answers button {
+  background-color: rgba(35, 41, 79, 0.15);
+  width: 300px;
+  height: 60px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  backdrop-filter: blur(7.5px);
+  border: none;
+  font-weight: 600;
+}
+/*=== Pseudo-elemento bottone ===*/
+.cnt-answers button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  background: linear-gradient(180deg, #fff, transparent) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+/*=== Colore bottoni hover / click ===*/
+.cnt-answers button:hover,
+.cnt-answers button:active {
+  background-color: #D20094;
+}
+/*===/// Fine tile bottoni \\\===*/
+
+/*=== Margine pulsanti ===*/
+/*.cnt-answers button:first-child,
+.cnt-answers button:nth-child(3) {
+  margin-right: 2rem;
+}
+
+.cnt-answers button:first-child,
+.cnt-answers button:nth-child(2) {
+  margin-bottom: 1rem;
+}*/
+.cnt-answers {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gird-template-rows: repeat(2, 1fr);
+gap: 1rem;
+}
+/*===///Fine margine pulsanti\\\===*/
+
+/*===///Fine Bottoni\\\====*/
+/* .cnt {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+} */
+/*=== Stile contatore domande ===*/
+.cnt-question-counter {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 7rem;
+  font-weight: 400;
+}
+
+.cnt-question-counter span {
+  color: #D20094;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/*===/// Fine stile contatore domande \\\===*/
+
+/*=== Countdown ===*/
+
+/*=== Div Timer ===*/
+.base-timer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+/*=== Stile svg timer ===*/
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 10px;
+  stroke: rgba(128, 128, 128, 0.7);
+}
+
+.base-timer__path-remaining {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+/*=== Colore iniziale del timer ===*/
+.base-timer__path-remaining.green {
+  color: #00FFFF;
+}
+
+/*=== Colore rimanente del timer ===*/
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+/*=== Colore allo scadere del timer ===*/
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.timer-label-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 23px;
+  font-size: 8px;
+  left: 30px;
+  color: white;
+}
+
+.base-timer__label {
+  /*   position: absolute; */
+    width: 35px;
+    height: 35px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+/*===/// Fine countdown \\\===*/
+
+/* Visualizza risultati esame */
+
+#esito-finale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #FFF;
+}
+
+#esito-finale span {
+  margin-bottom: 20px;
+}
+
+.errore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url(/assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+  background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(35,41,79,1) 52%, rgba(210,0,148,1) 100%);
+  display: none;
+  color: #FFF;
+}
+
+.errore p {
+  position: relative;
+  font-size: 2.5rem;
+  margin-top: 20%;
+  margin-left: 30%;
+}
+
+.reset {
+  position: absolute;
+  padding: 15px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: 30%;
+  cursor: pointer;
+  background-color: transparent;
+  color: #FFF;
+  font-size: 1.3rem;
+}
+
+.reset:hover {
+  background-color: #D20094;
+}
+
+#back {
+  display: none;
+  padding: 15px;
+  border: 1px solid #FFF;
+  border-radius: 25px;
+  margin: 120px 0 auto;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 1.3rem;
+}
+
+#back:hover {
+  background-color: #D20094;
+}
+
+ #myChart {
+   margin-left: 100px;
+}
+
+#cntEsito{
+ display: flex;
+ margin-left: 100px;
+
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrizione pagina -->
+    <meta name="description" content="Exam Epicode, Corso Epicode, Web Developer">
+    <!-- Parole chiave -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <!-- Autori -->
+    <meta author="Gruppo 2 - Epicode">
+    
+    <!-- Style common part -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Style index -->
+    <link rel="stylesheet" href="./css/index.css">
+
+     <!-- Mediaqueries -->
+    <link rel="stylesheet" href="./css/queries-index.css">
+
+    <!-- Google Fonts Outfit-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-32x32.png">
+
+    <title>EPICODE - Examen</title>
+</head>
+<body>
+    <header>
+
+        <!-- Logo aziendale -->
+         <div class="logo">
+           <img src="./assets/epicode_logo.png" alt="Logo aziendale">
+         </div>
+    </header>
+    <div class="container">
+        
+        <!-- Titolo -->
+        <div class="title">
+            <div>Welcome to</div>
+            <div>your exam</div>
+        </div>
+
+        <!-- Testo istruzioni -->
+        <p class="instruction">Instructions</p>
+        <div class="text">
+            <p>We don't expect most engineers to know the answers to all of these</p>
+            <p>questions, so dont't worry if you're unsure of a few of them.</p>  
+        </div>
+
+        <!-- Elenco puntato delle istruzioni -->
+        <ul class="list">
+            <li>Each question is <span>timed</span> anc can only be <span>answered once.</span></li>
+            <li>Changing browser tab or opening other windows will <span>invalidate the question.</span></li>
+            <li>This exam will take approx. <span>0-5 minutes.</span></li>
+        </ul>
+    </div>
+    
+    <!-- Check box di accettare le condizioni e button per iniziare l'esame -->
+    <div class="checkDiv">
+        
+        <label class="comtent"><span>I promise to answer myself without help from anyone</span>
+            <input type="checkbox" id="promiseCheck">
+            <span class="checkmark"></span>
+            <!-- Messaggio di errore -->
+            <div class="msg-error">required field</div>
+        </label>
+        
+        <!-- Button proceed -->
+        <div id="proceedBtn" class="proceedBtn">
+            <button class="btn"><span>proceed</span></button>
+        </div>
+    </div>
+
+    <!-- Script javascipt gestione button promise -->
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
