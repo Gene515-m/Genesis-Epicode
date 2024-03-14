@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*ESERCIZIO 1*/
+
+.jumbotron div h1:first-child {
+  font-weight: 900;
+  color: red;
+  font-family: sans-serif;
+}
+/*ESERCIZIO 2*/
+nav * {
+  color: #444;
+  font-weight: 600;
+}
+
+/*ESERCIZIO 3*/
+.jumbotron a:link {
+  color: blueviolet;
+}
+/*ESERCIZIO 4*/
+/*Primo blog post*/
+
+/*ESERCIZIO 5*/
+/*l'<hr> del primo blog post e colorarlo di rosso*/
+.blog-post-meta + p + hr {
+  background-color: red;
+  /* border: 2px solid lime; */
+}
+/*ESERCIZIO 6*/
+/*selezionare i link pari della navbar*/
+nav span:nth-child(even) {
+  color: aquamarine;
+}
+/*ESERCIZIO 7*/
+/*selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio")*/
+/* aside div:nth-child(2) .list-unstyled li * {
+  color: green;
+} */
+
+.list-unstyled.mb-0 li {
+  color: cornflowerblue;
+}
+/*ESERCIZIO 8*/
+.blog-post:nth-child(3) .blog-post-meta a {
+  color: yellow;
+}
+/*ESERCIZIO 9*/
+/*selezionare il secondo <li> della lista del terzo blog post*/
+.blog-post ul li:nth-child(2) {
+  color: rgb(181, 0, 102);
+}
+/*ESERCIZIO 10*/
+/*selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra*/
+footer + a {
+  color: mediumseagreen;
+  font-weight: 600;
+}
+/*ESERCIZIO 11*/
+/*selezionare il bottone "Nuovi" che trovi in basso*/
+.blog-pagination a:nth-child(2) {
+  background-color: orange;
+}
+/*ESERCIZIO 12*/
+/*selezionare il secondo link del footer*/
+footer a:nth-child(2) {
+  color: orangered;
+}
