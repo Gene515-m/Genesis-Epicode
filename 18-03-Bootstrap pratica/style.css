@@ -1,0 +1,166 @@
+/*  ******NB >>>>SASS(SCSS🔛CSS)<<<<********
+Simile al vecchio progetto e-commerce smartphone 
+ BOOTSTRAP v5.3  
+*/
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Colori sfumature sfondo */
+body {
+  color: #fff;
+  background: linear-gradient(
+    318deg,
+    #ff0062,
+    #efa300,
+    #9f08c9,
+    #03a2f2,
+    #0000ff
+  );
+  /* Impostazione dimensioni  background */
+  background-size: 1000% 1000%;
+
+  -webkit-animation: Coolgradient 41s linear infinite;
+  -moz-animation: Coolgradient 41s linear infinite;
+  -o-animation: Coolgradient 41s linear infinite;
+  animation: Coolgradient 41s linear infinite;
+}
+/* Animazione sfumatura */
+@-webkit-keyframes Coolgradient {
+  0% {
+    background-position: 5% 0%; /*Posizione iniziale */
+  }
+  50% {
+    background-position: 96% 100%; /* Posizione a metà animazione */
+  }
+  100% {
+    background-position: 5% 0%; /* Posizione finale, poi tornare posizione iniziale */
+  }
+}
+@-moz-keyframes Coolgradient {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+@-o-keyframes Coolgradient {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+@keyframes Coolgradient {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+
+/* Animation music notes [line 277 html] */
+.notes-anmtn-bkgd {
+  height: 100px;
+  color: #fff;
+}
+
+.el-note-1,
+.el-note-2,
+.el-note-3,
+.el-note-4 {
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
+
+.el-note-1 {
+  top: 48px;
+  left: 88px;
+  animation-delay: 0.5s;
+}
+
+.el-note-2 {
+  top: 70px;
+  left: 5%;
+  animation-delay: 1s;
+  color: #03a2f2;
+}
+
+.el-note-3 {
+  top: 130px;
+  left: 85%;
+  animation-delay: 1.5s;
+  /* color: #ff0062; */
+}
+
+.el-note-4 {
+  top: 60px;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.4) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
+/* Animation music notes */
+
+/*-----------------------------------------*/
+
+.card {
+  padding: 1rem;
+  border: none;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 0.05rem;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+}
+/* ******DA ELABORARE BENE******/
+/* .card:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  border: #b4008d solid 20px;
+} */
+
+.navbar-nav {
+  font-size: 1.4rem;
+}
+
+/*-----------------------------------------*/
+
+.dropdown-item:hover {
+  transition: all 0.3s;
+  background: rgba(22, 0, 103, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
