@@ -11,7 +11,7 @@ const displayCard = function (post) {
           <p class="card-text fw-bold">${post.title}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Serial # ${post.asin}</li>
+          <li class="list-group-item">ID # ${post.asin}</li>
           <li class="list-group-item">💲 ${post.price}</li>
           <li class="list-group-item">Category: ${post.category}</li>
         </ul>
