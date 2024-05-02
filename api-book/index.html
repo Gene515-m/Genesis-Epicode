@@ -86,10 +86,8 @@
            </g>
          </g>
        </svg>
-       
-          
-        </a>
-        <button
+      </a>
+      <button
           class="navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
@@ -105,7 +103,7 @@
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item fs-5">
               <a
                 class="nav-link active fw-bolder "
                 aria-current="page"
@@ -113,10 +111,10 @@
                 >Home</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item fs-5">
               <a class="nav-link " href="#">Review</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown fs-5">
               <a
                 class="nav-link" dropdown-toggle"
                 href="#"
@@ -127,19 +125,32 @@
                 Book Store
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Categories</a></li>
+                <li><a class="dropdown-item fs-5" href="#">Categories</a></li>
                 <!-- <li><hr class="dropdown-divider border border-white" /></li> -->
-                <li><a class="dropdown-item" href="#">Writer</a></li>
+                <li><a class="dropdown-item fs-5" href="#">Best Seller</a></li>
                 <!-- <li><hr class="dropdown-divider border border-white" /></li> -->
                 <li>
-                  <a class="dropdown-item" href="#">Lyrics</a>
+                  <a class="dropdown-item fs-5" href="#">Books</a>
                 </li>
               </ul>
             </li>
           </ul>
-          <!-- <form class="d-flex" role="search">
+          <!-- Cart Icon -->
+          <button class="btn btn-outline-light bg-gradient d-md-block border-0 me-3" type="button" data-bs-toggle="modal"
+          data-bs-target="#myModal">
+          
+            <span class="border-1 border-white rounded-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+            </span>
+            <span class="badge bg-danger rounded-pill">0</span>
+          </button>
+          <!-- End Cart Icon -->
+          <!-- Search -->
+          <form class="d-flex" role="search">
             <input
-              class="form-control me-2 bg-transparent d-none d-lg-block text-white"
+              class="form-control me-2 bg-transparent d-none d-lg-block"
               type="search"
               aria-label="Search"
             />
@@ -149,11 +160,78 @@
             >
               Search
             </button>
-          </form> -->
+          </form> 
+
+         
+
         </div>
       </div>
     </nav>
     <!--END NAVBAR-->
+
+    <!-- Modal -->
+    <div class="modal fade mt-5" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="myModalLabel">Cart List</h1>
+            <button class="btn-close btn-danger " data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Appare quando è vuoto -->
+            <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="gray" class="bi bi-cart-x" viewBox="0 0 16 16">
+              <path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z"/>
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+            </svg>
+            <span class="fs-3">Your Cart is Empty </span>
+            </div>
+            <!-- ========== -->
+            <!-- Appare quando viene aggiunto 1 o + elementi-->
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Item#</th>
+                  <th>Price</th>
+                  <th>Title</th>
+                  <th>Quantity</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>$0.00</td>
+                  <td>The Battle of Evernight - Special Edition: The Bitterbynde Book #3 (The Bitterbynde Trilogy)</td>
+                  <td>
+                    <div class="form-group row">
+                      <div class="col-md-8">
+                      <input type="number" class="item-count form-control" data-name="Title" value="1">
+                    </div>
+                  </div>
+                  </td>
+                  <td>
+                    <button class="delete-item btn btn-danger" data-name="Title">X</button>
+                  </td>
+                  <!-- <td>459.00</td> -->
+                </tr>
+              </tbody>
+            </table>
+            <span class="fw-bold ">Total:</span>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-danger " data-bs-dismiss="modal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+              Close
+            </button>
+            <button class="btn btn-primary">Empty Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
    
     <!--CARDS GROUP-->
     <div class="container">
@@ -281,7 +359,7 @@
       </footer>
     </div>
     <!-- END FOOTER -->
-
+    
     <!--Bootstrap script-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -289,5 +367,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
+    
   </body>
 </html>
