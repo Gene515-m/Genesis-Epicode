@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartElement = document.querySelector("tbody");
 
   let cartItemList = document.getElementById("listItemCart");
-  // let totalElements = document.getElementById("totalPrice");
+  let totalElements = document.getElementById("totalPrice");
 
   const emptyListItem = document.getElementById("emptyListItem");
   const emptyAll = document.getElementById("emptyAll");
@@ -62,12 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   getBookData();
 
-  //Da modificare (+ struttura in html)
+  //Aggiunta e rimozione elementi
   const updateCartCounter = () => {
+    const cartListModal = document.getElementById("cartListModal");
     cartListCounter.textContent = cartItems.length;
-    cartItems.length === 0
-      ? emptyCartDisplay.classList.remove("d-none")
-      : emptyCartDisplay.classList.add("d-none");
+    if (cartItems.length === 0) {
+      emptyCartDisplay.classList.remove("d-none");
+      cartListModal.classList.add("d-none");
+      totalElements.classList.add("d-none");
+    } else {
+      emptyCartDisplay.classList.add("d-none");
+      cartListModal.classList.remove("d-none");
+      totalElements.classList.remove("d-none");
+    }
   };
 
   const addItemToCart = (name, price) => {
@@ -75,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     updateCartCounter();
     addToCartAlert.classList.remove("d-none");
-    renderCart(); 
+    renderCart(); // Call renderCart after adding an item
     updateTotal();
   };
 
