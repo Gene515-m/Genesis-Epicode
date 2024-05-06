@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     updateCartCounter();
     addToCartAlert.classList.remove("d-none");
-    renderCart(); // Call renderCart after adding an item
+    renderCart(); 
     updateTotal();
   };
 
