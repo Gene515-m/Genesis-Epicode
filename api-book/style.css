@@ -3,3 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/*Rendering temporaneo .img*/
+/*Da SISTEMARE*/
+.card img {
+  width: 304px;
+  height: 304px;
+
+  /* max-height: 25%; */
+  /* object-fit: scale-down; */
+  object-fit: cover;
+}
+
+/*Responsive title text*/
+p {
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -155,7 +155,7 @@
               aria-label="Search"
             />
             <button
-              class="btn btn-dark bg-gradient  d-none d-lg-block"
+              class="btn bg-dark-subtle   btn-outline-secondary   d-none d-lg-block"
               type="submit"
             >
               Search
@@ -179,7 +179,7 @@
           </div>
           <div class="modal-body">
             <!-- Appare quando è vuoto -->
-            <div class="text-center">
+            <div id="displayEmptyCart" class="text-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="gray" class="bi bi-cart-x" viewBox="0 0 16 16">
               <path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793z"/>
               <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
@@ -187,7 +187,8 @@
             <span class="fs-3">Your Cart is Empty </span>
             </div>
             <!-- ========== -->
-            <!-- Appare quando viene aggiunto 1 o + elementi-->
+            <!-- Appare quando viene aggiunto 1 o + elementi -->
+            <!-- Da sistemare in js -->
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -199,25 +200,25 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr id="listItemCart">
                   <td>1</td>
                   <td>$0.00</td>
                   <td>The Battle of Evernight - Special Edition: The Bitterbynde Book #3 (The Bitterbynde Trilogy)</td>
                   <td>
                     <div class="form-group row">
                       <div class="col-md-8">
-                      <input type="number" class="item-count form-control" data-name="Title" value="1">
+                      <input type="number" class="item-count form-control pe-1" data-name="Title" value="1">
                     </div>
                   </div>
                   </td>
                   <td>
                     <button class="delete-item btn btn-danger" data-name="Title">X</button>
                   </td>
-                  <!-- <td>459.00</td> -->
                 </tr>
               </tbody>
+              
             </table>
-            <span class="fw-bold ">Total:</span>
+            <span id="totalPrice" class="fw-bold">Total: $0.00</span>
           </div>
           <div class="modal-footer">
             <button class="btn btn-outline-danger " data-bs-dismiss="modal">
@@ -226,13 +227,42 @@
               </svg>
               Close
             </button>
-            <button class="btn btn-primary">Empty Cart</button>
+            <button id="emptyAll" type="button" class="btn btn-outline-secondary me-5">
+              Empty
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+<path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"></path>
+</svg>
+              
+            </button>
+            <button type="button" class="btn btn-success">
+              Payment
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"></path>
+</svg>
+              
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- End Modal -->
-   
+   <!-- Alert Added to cart  -->
+   <div id="alertAdd" class="alert alert-success text-center d-none" role="alert">
+    Book successfully added to your cart✔
+  </div>
+  <!-- Opzione 2 -->
+  <!-- <div id="alertAdd" class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast fade hide" id="myToast">
+      <div class="toast-header text-bg-danger">
+        <div class="me-auto">Bootstrap</div>
+        <small>11 mins ago</small>
+      </div>
+      <div class="toast-body text-bg-danger">
+        Book successfully added to your cart✔
+      </div>
+    </div>
+  </div> -->
+   <!-- END Alert Added to cart  -->
     <!--CARDS GROUP-->
     <div class="container">
       <h1 class="text-white text-center mb-3">Book Store</h1>
